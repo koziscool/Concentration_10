@@ -1,0 +1,59 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="model.js"></script>
+	<script src="view.js"></script>
+	<script src="controller.js"></script>
+	<script src="cardmatcher.js"></script>
+	<script src="cardmatcher.js"></script>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+	<div class="game-info-container">
+		<div class="section">
+			<div id="game-state-text">
+				Pick a grid size and start game.
+			</div>
+		</div>
+
+		<div class="section">
+			Num guesses:
+			<div id="num-guesses">
+			</div>
+		</div>
+		
+		<div class="section">
+			Matched cards:
+			<div id="matched-cards">
+			</div>
+		</div>
+		
+		<div class="section">
+			Total cards:
+			<div id="total-cards">
+			</div>
+		</div>
+	</div>
+
+	<div class="form-container">
+		<form>
+			<label for="">Grid Size</label>
+			<br>
+			<input type="text" id="grid-size" name="grid-size"></input>
+			<br>
+			<input type="submit"/>
+			<br>
+		</form>
+	</div>
+
+	<div class="grid-container">
+		<div id="matcher-grid">
+		</div>
+	</div>
+</body>
+</html>
+
+
