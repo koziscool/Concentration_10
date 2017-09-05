@@ -6,6 +6,7 @@ matcherModel = {
 	cards: [],
 	numGuesses: 0,
 	matchedCards: 0,
+	currentId: 1,
 
 	init: function( size ) {
 		this.size = size || this.size;

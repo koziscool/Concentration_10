@@ -28,5 +28,19 @@
 	text-align: center;
 }
 
+.grid-container{
+	width: 80%;
+	text-align: center;
+}
 
+.card{
+	height:50px;
+	background-color: lightyellow;
+	margin: 1%;
+	box-sizing: border-box;
+}
+
+.name{
+	
+}
 
