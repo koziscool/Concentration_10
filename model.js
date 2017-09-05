@@ -7,6 +7,7 @@ matcherModel = {
 	numGuesses: 0,
 	matchedCards: 0,
 	currentId: 1,
+	selectedCard: null,
 
 	init: function( size ) {
 		this.size = size || this.size;
@@ -43,7 +44,35 @@ matcherModel = {
 		}
 	},
 
+	sameCard: function( id ) {
+		return this.selectedCard && this.selectedCard.id === id;
+	},
 
+
+	getCard: function( id ) {
+		for( var index in this.cards ) {
+			if( this.cards[index].id === id ) return this.cards[index];
+		}
+		console.log('miss');
+		return null;
+	},
+
+	setSelectedCard: function( id ) {
+		this.selectedCard = this.getCard(id);
+	},
+
+	checkGuess: function( id ) {
+		this.numGuesses++;
+		var correct = this.selectedCard.value === this.getCard(id).value;
+
+		this.selectedCard = null;
+		if( correct ) this.matchedCards += 2;
+
+		if( this.matchedCards === this.cards.length ) {
+			this.gameStateText = "congratulations, you win!"
+		}
+		return correct;
+	},
 };
 
 
