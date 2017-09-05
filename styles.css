@@ -30,7 +30,7 @@
 
 .grid-container{
 	width: 80%;
-	text-align: center;
+	margin: 0 auto;
 }
 
 .card{
@@ -38,9 +38,17 @@
 	background-color: lightyellow;
 	margin: 1%;
 	box-sizing: border-box;
+	display: inline-block;
+	border: 1px solid black;
+	transition: all 0.5s;
+	transform: rotateY(180deg);
+	text-align: center;
 }
 
 .name{
-	
+	backface-visibility: hidden;
+	transition: all 0.5s;
+	transform: translateY(60%) rotateY(180deg);
+	font-size:large;	
 }
 

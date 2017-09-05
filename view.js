@@ -5,10 +5,10 @@ matcherView = {
 	model: matcherModel,
 
 	init: function(  ) {
-		this.$grid = $("matcher-grid");
+		this.$grid = $("#matcher-grid");
 		for( var i = 0; i < this.model.cards.length ; i++ ) {
 			var card = this.model.cards[i];
-			var $cardDiv = $('<div><div class="name">' +    + '</div></div>');
+			var $cardDiv = $('<div><div class="name">' + card.value  + '</div></div>');
 			$cardDiv.addClass('card');
 			$cardDiv.data('card-id', card.id);
 			$cardDiv.attr('id', 'card' + card.id);

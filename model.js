@@ -34,7 +34,7 @@ matcherModel = {
 		var currentIndex = this.cards.length, rand, temp;
 
 		while( currentIndex > 0 ) {
-			rand = this.cards[ Math.floor( Math.random() * currentIndex ) ];
+			rand = Math.floor( Math.random() * currentIndex );
 			currentIndex--;
 
 			temp = this.cards[currentIndex];
